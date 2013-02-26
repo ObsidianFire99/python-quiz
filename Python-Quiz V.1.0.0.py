@@ -10,8 +10,21 @@ readcount = 1
 def choose():
     print "Welcome to Obsid's Python Quiz"
     global choice
-    print "1. Admin - 
-    game()
+    print "1. Admin - Make a new set of questions."
+    print "2. Play - Play the current quiz."
+    print "3. Import - Import a question set."
+    print "4. Export - Export the current loaded question set."
+    choice = raw_input("Type the number of your preferred option: ")
+    if choice = "1":
+        admin()
+    elif choice = "2":
+        play()
+    elif choice = "3":
+        importqs()
+    elif choice = "4":
+        exportqs()
+    else:
+        choose()
 
 def exportqs():
     chosenloc = raw_input("Enter the full path of your destination here: ")
@@ -49,9 +62,12 @@ def importqs():
         readcount = readcount + 1
     print "Done!"
     
-def game():
-    if choice == "a":
-        abort = raw_input("Warning - Proceeding will remove the current question set from the computor's memory. Type abort to return to the home screen")
+def admin() 
+        abort = raw_input("Warning - Proceeding will remove the current question set from the computor's memory. Type abort to return to the home screen otherwize, hit enter: ")
+        if abort = "abort" or "Abort":
+            choose()
+        else:
+            pass
         del alist[:]
         del qlist[:]
         c = int(raw_input("Enter the number of questions you want: "))
@@ -71,7 +87,8 @@ def game():
             pass
         print "Ok, Finished. Returning to Home Screen..."
         time.sleep(1)
-    elif choice == "p":
+
+def play()
         dashcount = 0
         while dashcount < 100:
             print "--------------------------------------------------"
@@ -88,10 +105,6 @@ def game():
                 print "Wrong"
             qnum = qnum + 1
         print "You got ", score, "/", qbar - 1
-    elif choice == "i":
-        importqs()
-    elif choice =="e":
-        exportqs()
     choose()
 
 choose()
