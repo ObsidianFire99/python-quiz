@@ -9,11 +9,11 @@ readcount = 1
 
 def choose():
     print "Welcome to Obsid's Python Quiz"
-    global choice
     print "1. Admin - Make a new set of questions."
     print "2. Play - Play the current quiz."
     print "3. Import - Import a question set."
     print "4. Export - Export the current loaded question set."
+    global choice
     choice = raw_input("Type the number of your preferred option: ")
     if choice = "1":
         admin()
