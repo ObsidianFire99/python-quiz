@@ -15,13 +15,13 @@ def choose():
     print "4. Export - Export the current loaded question set."
     global choice
     choice = raw_input("Type the number of your preferred option: ")
-    if choice = "1":
+    if choice == "1":
         admin()
-    elif choice = "2":
+    elif choice == "2":
         play()
-    elif choice = "3":
+    elif choice == "3":
         importqs()
-    elif choice = "4":
+    elif choice == "4":
         exportqs()
     else:
         choose()
@@ -62,12 +62,14 @@ def importqs():
         readcount = readcount + 1
     print "Done!"
     
-def admin() 
-        abort = raw_input("Warning - Proceeding will remove the current question set from the computor's memory. Type abort to return to the home screen otherwize, hit enter: ")
-        if abort = "abort" or "Abort":
+def admin():
+        abort = raw_input("Warning - Proceeding will remove the current question set from the computor's memory. Type abort to return to the home screen or type continue to carry on: ")
+        if abort == "abort":
             choose()
-        else:
+        elif abort == "continue":
             pass
+        else:
+            admin()
         del alist[:]
         del qlist[:]
         c = int(raw_input("Enter the number of questions you want: "))
@@ -88,7 +90,7 @@ def admin()
         print "Ok, Finished. Returning to Home Screen..."
         time.sleep(1)
 
-def play()
+def play():
         dashcount = 0
         while dashcount < 100:
             print "--------------------------------------------------"
@@ -105,6 +107,6 @@ def play()
                 print "Wrong"
             qnum = qnum + 1
         print "You got ", score, "/", qbar - 1
-    choose()
+        choose()
 
 choose()
