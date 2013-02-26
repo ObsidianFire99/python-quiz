@@ -10,7 +10,7 @@ readcount = 1
 def choose():
     print "Welcome to Obsid's Python Quiz"
     global choice
-    choice = raw_input("Choose (a)dmin for making a quiz, (i)mport to load a question set or (p)lay to play the quiz: ")
+    print "1. Admin - 
     game()
 
 def exportqs():
@@ -51,6 +51,7 @@ def importqs():
     
 def game():
     if choice == "a":
+        abort = raw_input("Warning - Proceeding will remove the current question set from the computor's memory. Type abort to return to the home screen")
         del alist[:]
         del qlist[:]
         c = int(raw_input("Enter the number of questions you want: "))
@@ -89,6 +90,8 @@ def game():
         print "You got ", score, "/", qbar - 1
     elif choice == "i":
         importqs()
+    elif choice =="e":
+        exportqs()
     choose()
 
 choose()
