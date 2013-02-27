@@ -5,7 +5,7 @@ A Command Line python quiz with functionality to create and play quizzes, and Im
 
 ===========
 
-Version - 1.0.0
+Version - 1.1.1
 
 License - The original creator (ObsidianFire99) wishes that users of this software and source code requests that users of this software and anyone who wishes to fork, clone or copy it in any way, shape or form respects the Creative Commons Attribution 3.0 Unported License.
 
